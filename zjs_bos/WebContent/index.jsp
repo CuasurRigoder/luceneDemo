@@ -8,6 +8,5 @@
 </head>
 <body>
 <jsp:forward page="/page_common_index.action"></jsp:forward>
-<h1>good boy</h1>
 </body>
 </html>
