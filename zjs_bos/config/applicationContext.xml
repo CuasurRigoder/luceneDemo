@@ -37,7 +37,7 @@
 		</property>
 		<property name="mappingLocations">
 			<list>
-				<value>classpath:com/lei/zjs/**/vo/*Model.hbm.xml</value>
+				<value>classpath:com/lei/zjs/**/vo/*.hbm.xml</value>
 			</list>
 		</property>
 	</bean>
