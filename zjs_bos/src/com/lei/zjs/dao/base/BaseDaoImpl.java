@@ -7,6 +7,7 @@ import java.util.List;
 
 import org.hibernate.Query;
 import org.hibernate.Session;
+import org.hibernate.criterion.DetachedCriteria;
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 
 public class BaseDaoImpl<T> extends HibernateDaoSupport implements BaseDao<T> {
@@ -61,6 +62,11 @@ public class BaseDaoImpl<T> extends HibernateDaoSupport implements BaseDao<T> {
 		}
 		query.executeUpdate();
 		session.close();
+	}
+
+	@Override
+	public List<T> findByCriteria(DetachedCriteria dc) {
+		return this.getHibernateTemplate().findByCriteria(dc);
 	}
 }
 

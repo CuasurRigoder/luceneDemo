@@ -3,6 +3,8 @@ package com.lei.zjs.dao.base;
 import java.io.Serializable;
 import java.util.List;
 
+import org.hibernate.criterion.DetachedCriteria;
+
 public interface BaseDao<T> {
 
 	/**
@@ -39,4 +41,9 @@ public interface BaseDao<T> {
 	 * 命名sql执行
 	 */
 	public void executeByNamedQuery(String query,Object...args);
+	
+	/**
+	 * 条件查询
+	 */
+	public List<T> findByCriteria(DetachedCriteria dc);
 }
