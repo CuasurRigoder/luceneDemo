@@ -1,6 +1,7 @@
 package com.lei.zjs.dao;
 
 import com.lei.zjs.dao.base.BaseDao;
+import com.lei.zjs.vo.User;
 
 /**
  * 用户dao接口
@@ -8,6 +9,6 @@ import com.lei.zjs.dao.base.BaseDao;
  *
  * @param <T>
  */
-public interface UserDao<T> extends BaseDao<T>{
+public interface UserDao extends BaseDao<User>{
 
 }

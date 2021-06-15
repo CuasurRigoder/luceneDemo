@@ -12,6 +12,6 @@ import com.lei.zjs.vo.User;
 public class UserServiceImpl implements UserService{
 
 	@Resource
-	private UserDao<User> userDao;
+	private UserDao userDao;
 	
 }

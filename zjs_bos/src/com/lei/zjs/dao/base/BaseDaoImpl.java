@@ -5,8 +5,11 @@ import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 import java.util.List;
 
+import javax.annotation.Resource;
+
 import org.hibernate.Query;
 import org.hibernate.Session;
+import org.hibernate.SessionFactory;
 import org.hibernate.criterion.DetachedCriteria;
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 
@@ -19,7 +22,12 @@ public class BaseDaoImpl<T> extends HibernateDaoSupport implements BaseDao<T> {
 		Type[] actualTypeArguments = genericSuperclass.getActualTypeArguments();
 		domainClass = (Class<T>) actualTypeArguments[0];
 	}
-
+	
+	@Resource
+	public void setSF(SessionFactory sessionFactory) {
+		super.setSessionFactory(sessionFactory);
+	}
+	
 	@Override
 	public void save(T entity) {
 		this.getHibernateTemplate().save(entity);

@@ -7,6 +7,6 @@ import com.lei.zjs.dao.base.BaseDaoImpl;
 import com.lei.zjs.vo.User;
 
 @Repository
-public class UserDaoImpl extends BaseDaoImpl<User> implements UserDao<User> {
+public class UserDaoImpl extends BaseDaoImpl<User> implements UserDao {
 
 }
